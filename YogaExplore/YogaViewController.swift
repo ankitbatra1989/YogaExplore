@@ -46,7 +46,7 @@ class YogaViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.3) {
             self.scrollView.alpha = 1
         }
         UIView.animate(withDuration: 0.5) {
@@ -82,15 +82,22 @@ class YogaViewController: UIViewController {
     }
     
     @IBAction func starTapped(_ sender: UIButton) {
+        // Set rating label
     }
     
     @IBAction func favouriteButtonTapped(_ sender: UIButton) {
+        // set favourite/ unfavourite
     }
     
     @IBAction func locationButtonTapped(_ sender: UIButton) {
+        // location button tapped. Open maps
     }
     
     @IBAction func seeOnMapButtonTapped(_ sender: UIButton) {
+        // Show location on map 
     }
 
+    @IBAction func addReviewButtonTapped(_ sender: UIButton) {
+        // Add review button tapped
+    }
 }

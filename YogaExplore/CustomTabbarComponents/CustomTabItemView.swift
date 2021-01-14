@@ -94,11 +94,11 @@ class CustomTabItemView: UIView {
         tabBarItem.translatesAutoresizingMaskIntoConstraints = false
         tabBarItem.clipsToBounds = true
         NSLayoutConstraint.activate([
-            itemIconView.heightAnchor.constraint(equalToConstant: 25),
+//            itemIconView.heightAnchor.constraint(equalToConstant: 25),
             itemIconView.widthAnchor.constraint(equalToConstant: 25),
             itemIconView.centerXAnchor.constraint(equalTo: tabBarItem.centerXAnchor),
             itemIconView.topAnchor.constraint(equalTo: tabBarItem.topAnchor, constant: 22),
-            itemTitleLabel.heightAnchor.constraint(equalToConstant: 13),
+//            itemTitleLabel.heightAnchor.constraint(equalToConstant: 13),
             itemTitleLabel.topAnchor.constraint(equalTo: itemIconView.bottomAnchor, constant: 10),
             itemTitleLabel.centerXAnchor.constraint(equalTo: tabBarItem.centerXAnchor),
             itemTitleLabel.bottomAnchor.constraint(equalTo: tabBarItem.bottomAnchor, constant: -22)
@@ -120,7 +120,7 @@ class CustomTabItemView: UIView {
         
         let tabToActivate = self.subviews[tab]
         let itemTitleLabel = tabToActivate.viewWithTag(12) as? UILabel
-        itemTitleLabel?.textColor = UIColor(red: (170.0/255.0), green: (143.0/255.0), blue: (118.0/255.0), alpha: 1.0)
+        itemTitleLabel?.textColor = UIColor(red: (185.0/255.0), green: (160.0/255.0), blue: (137.0/255.0), alpha: 1.0)
 
         //
         if let itemIconView = tabToActivate.viewWithTag(13) as? UIImageView {

@@ -71,7 +71,8 @@ class CustomTabBarController: UITabBarController {
         
         // hide the orignal tab bar
         tabBar.isHidden = true
-        
+
+        // Add positioning constraints to place the nav menu right where the tab bar should be
         self.customTabBar = CustomTabItemView(menuItems: items, frame: frame)
         self.customTabBar.backgroundColor = .white
         self.customTabBar.translatesAutoresizingMaskIntoConstraints = false
@@ -89,7 +90,6 @@ class CustomTabBarController: UITabBarController {
         // Add it to the view
         self.view.addSubview(customTabBar)
 
-        // Add positioning constraints to place the nav menu right where the tab bar should be
         NSLayoutConstraint.activate([
             self.customTabBar.leadingAnchor.constraint(equalTo: tabBar.leadingAnchor),
             self.customTabBar.trailingAnchor.constraint(equalTo: tabBar.trailingAnchor),
@@ -97,12 +97,9 @@ class CustomTabBarController: UITabBarController {
             self.customTabBar.heightAnchor.constraint(equalToConstant: tabBarHeight),
             self.customTabBar.bottomAnchor.constraint(equalTo: tabBar.bottomAnchor)
         ])
-        
-        print(customTabBar.frame)
         for i in 0 ..< items.count {
             controllers.append(items[i].viewController)
         }
-        
         self.view.layoutIfNeeded()
         completion(controllers)
     }
